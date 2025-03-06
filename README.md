@@ -93,6 +93,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 3. **/todo/create** - creates a todo and schedules an email reminder
 
    method: POST
+   header: {Authorization: Bearer ${token}}
 
    **Payload** :
 
@@ -117,6 +118,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 4. **/todo/:${todoId}** - get todo
 
    method: GET
+   header: {Authorization: Bearer ${token}}
 
    **Succesful Response** :
 
@@ -130,6 +132,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 5. **/todo/:${todoId}** - update todo details
 
    method: PATCH
+   header: {Authorization: Bearer ${token}}
 
    **Payload** :
 
@@ -154,6 +157,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 6. **/todo/:${todoId}** - remove todo
 
    method: DELETE
+   header: {Authorization: Bearer ${token}}
 
    **Succesful Response** :
 
@@ -166,6 +170,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 7. **/todo/status/complete/:${todoId}** - mark todo as completed
 
    method: PATCH
+   header: {Authorization: Bearer ${token}}
 
    **Succesful Response** :
 
@@ -179,6 +184,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 8. **/todo/status/pending/:${todoId}** - unmark todo from completed
 
    method: PATCH
+   header: {Authorization: Bearer ${token}}
 
    **Succesful Response** :
 
@@ -192,6 +198,7 @@ Base EndPoint: **"http://localhost:${PORT}$/api"**
 9. **/todo/list** - get todo list for particular date
 
    method: POST
+   header: {Authorization: Bearer ${token}}
 
    **Payload** :
 
